@@ -37,7 +37,7 @@ const Card = () => {
     },
   });
   return (
-    <div className="bg-gray-900 h-full rounded-lg text-white px-2  ">
+    <div className="bg-gray-900 h-screen rounded-lg text-white px-2  ">
       <h2 className="text-[20px] p-4 tracking-wider px-9">Payment Info</h2>
 
       <form onSubmit={formik.handleSubmit} className="p-3 px-9">
@@ -160,7 +160,7 @@ const Card = () => {
 
         <button
           type="submit"
-          className="rounded-lg bg-white text-center w-full mt-5 p-2 text-black font-semibold text-[20px] "
+          className="rounded-lg bg-white text-center w-full mt-10 p-3 text-black font-semibold text-[20px] "
         >
           Pay Marcus
         </button>

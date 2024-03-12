@@ -2,17 +2,13 @@
 import { useFormik } from "formik";
 
 interface IValues {
-  expiryYear: number;
-  cvv: string;
-}
-
-interface IErrors {
   expiryYear: string;
   cvv: string;
 }
+
 const Card = () => {
   const validate = (values: IValues) => {
-    const errors: IErrors = {
+    const errors: IValues = {
       expiryYear: "",
       cvv: "",
     };
@@ -31,7 +27,7 @@ const Card = () => {
       nameOnCard: "",
       cardNum: "",
       expiryMonth: "",
-      expiryYear: 0,
+      expiryYear: "",
       cvv: "",
       saveOption: "",
     },
@@ -41,7 +37,7 @@ const Card = () => {
     },
   });
   return (
-    <div className="bg-gray-900 mb-3 rounded-lg text-white px-2 ">
+    <div className="bg-gray-900 h-full rounded-lg text-white px-2  ">
       <h2 className="text-[20px] p-4 tracking-wider px-9">Payment Info</h2>
 
       <form onSubmit={formik.handleSubmit} className="p-3 px-9">
@@ -164,7 +160,7 @@ const Card = () => {
 
         <button
           type="submit"
-          className="rounded-lg bg-white text-center w-full mt-5 p-3 text-black font-semibold text-[20px]"
+          className="rounded-lg bg-white text-center w-full mt-5 p-2 text-black font-semibold text-[20px] "
         >
           Pay Marcus
         </button>

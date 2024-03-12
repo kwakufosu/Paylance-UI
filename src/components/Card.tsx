@@ -37,7 +37,7 @@ const Card = () => {
     },
   });
   return (
-    <div className="bg-gray-900 h-screen rounded-lg text-white px-2  ">
+    <div className="bg-gray-900 h-[650px] rounded-lg text-white px-2  ">
       <h2 className="text-[20px] p-4 tracking-wider px-9">Payment Info</h2>
 
       <form onSubmit={formik.handleSubmit} className="p-3 px-9">

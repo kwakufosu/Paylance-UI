@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+import { useState } from "react";
 import CardItem from "./CardItem";
 import Summary from "./Summary";
 
 const Checkout = () => {
+  const [single, setSingle] = useState(0);
+  const [recurring, setRecurring] = useState(0);
+
   return (
     <>
       <div>
@@ -12,8 +18,8 @@ const Checkout = () => {
           <p className=" mb-5 text-right">Price:</p>
         </div>
 
-        <CardItem />
-        <Summary />
+        <CardItem setSingle={setSingle} setRecurring={setRecurring} />
+        <Summary recurring={recurring} single={single} />
       </div>
     </>
   );
